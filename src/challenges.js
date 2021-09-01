@@ -60,8 +60,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function isDivisibleBy(number) {
+  let result = '';
+  if ((number % 3) === 0 && (number % 5) === 0) {
+    result = 'fizzBuzz';
+  } else if ((number % 3) === 0) {
+    result = 'fizz';
+  } else if ((number % 5) === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
+}
+
+function fizzBuzz(array) {
+  let stringArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    stringArray.push(isDivisibleBy(array[index]));
+  }
+  return stringArray;
 }
 
 // Desafio 9
