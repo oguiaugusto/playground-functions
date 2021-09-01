@@ -83,12 +83,48 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Funções de Encode ->
+function encodeCompare(letter) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < vowels.length; index += 1) {
+    if (letter === vowels[index]) {
+      let result = (index + 1);
+      return result;
+    }
+  }
+  return letter;
 }
-function decode() {
-  // seu código aqui
+
+function encode(string) {
+  let encodedString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    encodedString += encodeCompare(string[index]);
+  }
+  return encodedString;
 }
+// <- Funções de Encode
+
+// Funções de Decode ->
+function decodedCompare(letter) {
+  const numbers = ['1', '2', '3', '4', '5'];
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (letter === numbers[index]) {
+      let result = vowels[index];
+      return result;
+    }
+  }
+  return letter;
+}
+
+function decode(string) {
+  let decodedString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    decodedString += decodedCompare(string[index]);
+  }
+  return decodedString;
+}
+// <- Funções Decode
 
 module.exports = {
   calcArea,
