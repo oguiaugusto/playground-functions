@@ -101,8 +101,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let suggestion = '';
+  let findNumbers = /\d+/g;
+  let numbers = string.match(findNumbers);
+  let glassOfWater = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    let number = 0;
+    number = parseInt(numbers[index], 10);
+    glassOfWater += number;
+  }
+  if (glassOfWater > 1) {
+    suggestion = `${glassOfWater} copos de água`;
+  } else {
+    suggestion = `${glassOfWater} copo de água`;
+  }
+  return suggestion;
 }
 
 module.exports = {
