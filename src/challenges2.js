@@ -16,11 +16,8 @@ function techList(array, name) {
 }
 
 // Desafio 11
-<<<<<<< HEAD
 // Funções do Desafio 11 ->
 
-=======
->>>>>>> 828b273f0fbde21f21870e1dc4680e75c004ecc0
 // A função abaixo verifica se o número em questão é menor que zero
 // ou maior que nove. Para manter o tamanho da linha nos parâmetros,
 // ela é nomeada dessa forma pouco explicativa. Onde 'S' significa
