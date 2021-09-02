@@ -91,8 +91,13 @@ function generatePhoneNumber(array) {
 // <- Funções do Desafio 11
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  if (lineA < (lineB + lineC) && lineA > (lineB - lineC)) {
+    result = true;
+    return result;
+  }
+  return result;
 }
 
 // Desafio 13
